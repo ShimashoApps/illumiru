@@ -1,4 +1,15 @@
-/* This is a CSS file */
+ #map {
+        height: 67%;
+        width: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      
 .bttn{
     display: inline-block;
     text-decoration: none;
@@ -16,12 +27,12 @@
     transition: .4s;
 }
 
-.btn:hover{
+.bttn:hover{
     background: #668ad8;
      box-shadow: 0px 0px 0px 5px #668ad8;
 }
-
-     .modoru_btn{
+   
+.modoru_btn{
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -36,67 +47,5 @@
     border: dotted 1px #FFF;
 }　
 
-#map {
-        height: 69%;
-        width: 100%;
-      }
-    
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      
-    
-      
-      
-      
-      .mbtn{
-position: relative;
-display: inline-block;
-font-weight: bold;
-padding: 10% 10%;
-text-decoration: none;
-color: #00BCD4;
-background: #ECECEC;
-transition: .4s;
-}
 
-.mbtn:hover{
-background: #00bcd4;
-color: white;
-}　
-
-  
-      
-      .modoru_btn{
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #668ad8;
-    color: #FFF;
-    border-radius: 40px;
-    box-shadow: 0px 0px 0px 5px #668ad8;
-    border: dashed 1px #FFF;
-}
-
-.modoru_btn:hover{
-    border: dotted 1px #FFF;
-}　
-
-/*
-.mbtn{
-position: relative;
-display: inline-block;
-font-weight: bold;
-padding: 0.25em 0.5em;
-text-decoration: none;
-color: #00BCD4;
-background: #ECECEC;
-transition: .4s;
-}.mbtn:hover {
-background: #00bcd4;
-color: white;
-} */
 
