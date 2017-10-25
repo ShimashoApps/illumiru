@@ -15,7 +15,7 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
     <!-- site css -->
     <link rel="stylesheet" href="css/site.min.css">
     <link rel="stylesheet" href="css/zen.css">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,800,700,400italic,600italic,700italic,800italic,300italic" rel="stylesheet" type="text/css">
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
       <script src="js/html5shiv.js"></script>
@@ -23,30 +23,72 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
     <![endif]-->
     <script type="text/javascript" src="js/site.min.js"></script>
   </head>
-
-
-
+  
+  
+  
   <body class="home">
    <a href="./index.html" >
   <img src="img/head.jpeg"  class="img-rounded img-responsive"></a><p/>
-
-
+  
+    
  <div class="jumbotron">
               <div class="jumbotron-photo"><img src="img/Kashibaya.JPG" /></div>
               <div class="jumbotron-contents">
                 <h4>場所</h4>   岡部宿大旅籠柏屋・内野本陣史跡広場
-                <h4>点灯時間</h3>午後6時から午後9時まで
-                <h4>HP</h4><a href="https://wwwcity.fujieda.shizuoka.jp ">https://wwwcity.fujieda.shizuoka.jp </a>
-                <h4>イベント</h4><h5>11月23日(木）及び期間中の土曜日午後6時～8時</h5>大旅籠柏歴史資料館　和室
-                「プロジェクションマッピングを開催(入管無料)
-                <h4>コメント</h4>江戸時代に建てられた建造物と竹製のオブジェクトをはじめとする現代アートとの
-                コラボレーションにより幻想的な世界を演出します。
+                <h4>点灯期間</h3>平成29年11月23日（木・祝）～平成29年12月24日（日）
+                <br/><b>※点灯期間中の11月23日（木・祝）と金・土・日に点灯します。</b>
+                <h4>点灯時間</h3>18時から21時まで
+                <h4>HP</h4><a href="http://www.city.fujieda.shizuoka.jp/soshiki/sports_
+                bunka/kaidobunka/event/1450433789974.html">http://www.city.fujieda.shizuoka.jp/soshiki/sports_<br/>bunka/kaidobunka/event/1450433789974.html</a>
+                <h4>点灯式イベント</h4>11月23日(木　祝)　17時30分～<br/>
+                点灯式の時のみ上映する“内野本陣プロジェクションマッピング”のほか、
+                竹で作ったオブジェクトをライトアップして幻想的な空間を演出。また、岡部聖母幼稚園児によるクリスマスソングの披露もあります。
+                <h4>イベント</h4>
+                【ナイトミュージアム】<br/>
+                11月23日(木　祝)　と期間中毎週土曜日　18時～21時<br/>
+                市内外を中心に活躍する地元アーティストが制作したプロジェクションマッピングを歴史資料館内で上映。また、地元高校生などによるフィンランドの伝統的な装飾品“ヒンメリ”の展示や、ギャラリーでは現代アート展も開催。
+                <br/>
+                【現代アート展　第１期】<br/>
+                ・「白と黒の作品展」Robert Edwin
+                ・「未来のアーティスト展Ⅰ」静岡県立清水南高等学校　芸術科３年
+                中西凛・中根惇・杉山享大
+                <br/>
+                【現代アート展　第２期】<br/>
+                ・「Reflection展」清水陽介
+                「未来のアーティスト展Ⅱ」藤枝順心高等学校　美術造形デザイン科
 
+                <h4>コメント</h4>江戸時代に建てられた大旅籠柏屋は、往時の繁栄を窺わせる雄大な建造物です。
+                今回、大旅籠柏屋を舞台に「歴史文化」と「現代アート」が融合した内容で開催。
+                今年は、市内のアーティストたちが作成したプロジェクションマッピングの上映や、
+                芸術家をめざす市内の高校生の力強い作品とプロのアーティストの作品も展示します。
+
+                ※現代アート展は、月曜日を除く9時～17時に観覧できます。
+                <h4>ルート検索</h4>
+                少し時間がかかります。
+                <p id="ten">少々お待ちください</p>  
+               <script language="JavaScript">
+var u="";
+if( navigator.geolocation ){
+    navigator.geolocation.watchPosition(
+    function onSuccess( position ){
+        var lat=position.coords.latitude;
+        var lng=position.coords.longitude;
+        document.getElementById("ten").innerHTML="<a href='http://maps.google.com/maps?saddr="+lat+","+lng+"&daddr= 34.9193000,138.2825800&dirflg=w'><h5>ルートを見る</h5></a>";}, 
+    function onError(error){
+        var errorMessage = {
+            0: "原因不明のエラーが発生しました…。" ,
+            1: "位置情報の取得が許可されませんでした…。" ,
+            2: "電波状況などで位置情報が取得できませんでした…。" ,
+            3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。" ,};
+        alert(errorMessage[error.code]);});}
+else{}
+</script>
+                                   
                 </div>
             </div>
             <center><a href="./index.html" class="modoru_btn">ホーム</a>&nbsp;&nbsp;&nbsp;
                &nbsp;&nbsp;&nbsp;<a href="javascript:history.back(-1)" class="modoru_btn">もどる</a><br/><br/>
            </center>
-
+   
   </body>
 </html>

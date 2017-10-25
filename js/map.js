@@ -1,6 +1,8 @@
 var map;
 var marker;
 var infoWindow;
+var marker;
+    
 
 function initMap()
 {
@@ -8,10 +10,10 @@ function initMap()
     {
         center:
         {
-            lat: 34.8498000,
-            lng: 138.252500
+            lat: 34.927322,
+            lng: 138.319761
         },
-        zoom: 15
+        zoom: 10
     });
     var infoWindow = new google.maps.InfoWindow(
     {
@@ -44,9 +46,14 @@ function initMap()
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos)
     {
+       
         infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.':'Error: Your browser doesn\'t support geolocation.');
+    
+    
     }
+    
+    
     
     var marker = new google.maps.Marker(
     {
@@ -57,7 +64,12 @@ function initMap()
         },
         map: map,
         title: '藤枝駅北口広場'
-    });
+        });
+   
+   new google.maps.InfoWindow({
+    content: '藤枝駅北口広場'
+  });
+      
     var marker = new google.maps.Marker(
     {
         position:
@@ -126,7 +138,7 @@ function initMap()
             lng: 138.1762455
         },
         map: map,
-        title: '帯通り'
+        title: 'おび通り'
     });
     var marker = new google.maps.Marker(
     {
@@ -176,16 +188,7 @@ function initMap()
             lng: 138.3181213
         },
         map: map,
-        title: '焼津駅南口駅前広場'
+        title: 'ＪＲ焼津駅南口広場'
     });
-    var marker = new google.maps.Marker(
-    {
-        position:
-        {
-            lat: 34.8361591,
-            lng: 138.2043456
-        },
-        map: map,
-        title: '六合駅前'
-    });
+    
 }

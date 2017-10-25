@@ -14,21 +14,21 @@ color: white;
 } */
 
 .itiran {
-display: inline-block;
-padding: 5% 5%;
-text-decoration: none;
-color: #67c5ff;
-border: solid 2px #67c5ff;
-border-radius: 3px;
-transition: .4s;
+    display: inline-block;
+    padding: 5% 5%;
+    text-decoration: none;
+    color: #67c5ff;
+    border: solid 2px #67c5ff;
+    border-radius: 3px;
+    transition: .4s;
 }
-.itiran:hover {
-background: #67c5ff;
-color: white;
-} 
 
-  
-.modoru_btn{
+.itiran:hover {
+    background: #67c5ff;
+    color: white;
+}
+
+.modoru_btn {
     display: inline-block;
     padding: 0.5em 1em;
     text-decoration: none;
@@ -39,6 +39,30 @@ color: white;
     border: dashed 1px #FFF;
 }
 
-.modoru_btn:hover{
+.modoru_btn:hover {
     border: dotted 1px #FFF;
-}　
+}
+
+body{
+    height: 100%;
+    width: 100%;
+}
+#main{
+    height: 90%;
+    width: 100%;
+}
+
+#footer {
+    position: absolute;
+    height: 10%;
+    width: 100%;
+    background-color: #493496;
+    border-style:dotted none none none;
+    color: #ffe9b2;
+}
+#footerText{
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+}

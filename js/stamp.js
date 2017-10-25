@@ -59,12 +59,15 @@ function checkLocation(a, b)
                     $(target)
                         .append(insert);
                     check[i] = "1";
+                    check[0] = Number(check[0]) + 1;
                 }
                 else
                 {
                     // insert=csvList[i][1]+"ここではない</br>"+distance+"</br>"+radius+"</br>";
-                    $(target).append(insert);
+                    $(target)
+                        .append(insert);
                     // check[i]="0";
+                    check[0] = Number(check[0]) + 1;
                 }
                 if (check[i] == 1)
                 {
@@ -75,9 +78,9 @@ function checkLocation(a, b)
                     insert = '<img src="' + csvList[i][5] + '" id="img">';
                 }
             }
-            // check[1]=check[1]+2;
             check = check.join(",");
-            document.getElementById("csvText").innerHTML = check;
+            document.getElementById("csvText")
+                .innerHTML = check;
             setLocalStrage(check);
         }
     });
@@ -85,16 +88,9 @@ function checkLocation(a, b)
 
 function setLocalStrage(data)
 {
-    if (('localStorage' in window) && (window.localStorage !== null))
-    {
-        // データの保存
-        localStorage.setItem('stamp_info', data);
-        // document.getElementById("localStorageAF").innerHTML=data;
-    }
-    else
-    {
-        alert("申し訳ありません。この端末ではスタンプラリーを実施することができません");
-    }
+    // データの保存
+    localStorage.setItem('illumiruStamp_infoN', data);
+    // document.getElementById("localStorageAF").innerHTML=data;
 }
 
 function getLocalStrage()
@@ -102,12 +98,12 @@ function getLocalStrage()
     var localData = ["0,0,0,0,0,0,0,0,0,0,0,0,0,0,0"];
     if (('localStorage' in window) && (window.localStorage !== null))
     {
-        if (window.localStorage !== null)
+        if (window.localStorage['illumiruStamp_infoN'] == null)
         {
-            localStorage.setItem('stamp_info', localData);
+            localStorage.setItem('illumiruStamp_infoN', localData);
         }
         // データの取得
-        localData = localStorage.getItem('stamp_info');
+        localData = localStorage.getItem('illumiruStamp_infoN');
         // document.getElementById("localStorage").innerHTML=localData;
     }
     else
