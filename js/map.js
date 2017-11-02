@@ -2,7 +2,6 @@ var map;
 var marker;
 var infoWindow;
 var marker;
-    
 
 function initMap()
 {
@@ -19,7 +18,6 @@ function initMap()
     {
         map: map
     });
-    
     // Try HTML5 geolocation.
     if (navigator.geolocation)
     {
@@ -32,8 +30,7 @@ function initMap()
             infoWindow.setPosition(pos);
             infoWindow.setContent('あなたは今ここにいます。');
             map.setCenter(pos);
-        }, 
-        function()
+        }, function()
         {
             handleLocationError(true, infoWindow, map.getCenter());
         });
@@ -46,14 +43,62 @@ function initMap()
 
     function handleLocationError(browserHasGeolocation, infoWindow, pos)
     {
-       
         infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.':'Error: Your browser doesn\'t support geolocation.');
-    
-    
-    }
-    
-    
+        infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+}
+   
+    var infoWindow2 = new google.maps.InfoWindow(
+    {
+        content: '藤枝駅北口広場</br><a href="http://maps.google.com/maps?daddr=34.8490000,138.252500&saddr="pos"&dirflg=d&t=m" onclick="click1">現在地からルート検索</a></br><a href="rumisuta.html">もっと見る</a>'
+    });
+     var infoWindow3 = new google.maps.InfoWindow(
+    {
+        content: '藤枝駅南口広場</br><a href="http://maps.google.com/maps?daddr=34.8490000,138.252500&saddr="pos"&dirflg=d&t=m" onclick="click2">現在地からルート検索</a></br><a href="rumisuta.html">もっと見る</a>'
+    });
+    var infoWindow4 = new google.maps.InfoWindow(
+    {
+        content: '藤枝駅南通り</br><a href="http://maps.google.com/maps?daddr=34.847782, 138.25356&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="rumisuta.html">もっと見る</a>'
+    });
+    var infoWindow5 = new google.maps.InfoWindow(
+    {
+        content: '岡部大旅籠柏屋</br><a href="http://maps.google.com/maps?daddr=34.9193000,138.2825800&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="okabe.html">もっと見る</a>'
+    });
+    var infoWindow6 = new google.maps.InfoWindow(
+    {
+        content: '蓮華寺池公園</br><a href="http://maps.google.com/maps?daddr=34.8751221,138.2524786&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="rengeji.html">もっと見る</a>'
+    });
+    var infoWindow7 = new google.maps.InfoWindow(
+    {
+        content: '島田市駅前</br><a href="http://maps.google.com/maps?daddr=34.8307965,138.1739739&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="simaeki.html">もっと見る</a>'
+    });
+    var infoWindow8 = new google.maps.InfoWindow(
+    {
+        content: '島田市駅前緑地</br><a href="http://maps.google.com/maps?daddr=34.8313728,138.1737687&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="ryokuti.html">もっと見る</a>'
+    });
+    var infoWindow9 = new google.maps.InfoWindow(
+    {
+        content: 'おび通り</br><a href="http://maps.google.com/maps?daddr=34.8327585, 138.1762455&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="obidori.html">もっと見る</a>'
+    });
+    var infoWindow10 = new google.maps.InfoWindow(
+    {
+        content: '金谷駅前</br><a href="http://maps.google.com/maps?daddr=34.8191684,138.1251899&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="kanaya.html">もっと見る</a>'
+    });
+    var infoWindow11 = new google.maps.InfoWindow(
+    {
+        content: '六合駅前</br><a href="http://maps.google.com/maps?daddr=34.8361591,138.2043456&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="rokugou.html">もっと見る</a>'
+    });
+    var infoWindow12 = new google.maps.InfoWindow(
+    {
+        content: '青葉シンボルロード</br><a href="http://maps.google.com/maps?daddr=34.9734533,138.3820972&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="aoba.html">もっと見る</a>'
+    });
+    var infoWindow13 = new google.maps.InfoWindow(
+    {
+        content: '清水港線跡遊歩道</br><a href="http://maps.google.com/maps?daddr=lat: 35.0182562,138.489236&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="simizu.html>もっと見る</a>'
+    });
+    var infoWindow14 = new google.maps.InfoWindow(
+    {
+        content: 'ＪＲ焼津駅南口広場</br><a href="http://maps.google.com/maps?daddr=34.8717453,138.3181213&saddr="pos"&dirflg=d&t=m">現在地からルート検索</a></br><a href="yaidu.html">もっと見る</a>'
+    });
     
     var marker = new google.maps.Marker(
     {
@@ -64,13 +109,15 @@ function initMap()
         },
         map: map,
         title: '藤枝駅北口広場'
-        });
-   
-   new google.maps.InfoWindow({
-    content: '藤枝駅北口広場'
-  });
-      
-    var marker = new google.maps.Marker(
+    });
+    marker.addListener('click', function()
+    {
+        infoWindow2.open(map, marker);
+    });
+    
+    
+    
+    var marker2 = new google.maps.Marker(
     {
         position:
         {
@@ -79,8 +126,15 @@ function initMap()
         },
         map: map,
         title: '藤枝駅南口広場'
+    }); 
+    marker2.addListener('click', function()
+    {
+        infoWindow3.open(map, marker2);
     });
-    var marker = new google.maps.Marker(
+    
+   
+    
+    var marker3 = new google.maps.Marker(
     {
         position:
         {
@@ -90,7 +144,13 @@ function initMap()
         map: map,
         title: '藤枝駅南通り'
     });
-    var marker = new google.maps.Marker(
+     marker3.addListener('click', function()
+    {
+        infoWindow4.open(map, marker3);
+    });
+    
+    
+    var marker4 = new google.maps.Marker(
     {
         position:
         {
@@ -100,7 +160,11 @@ function initMap()
         map: map,
         title: '岡部宿大旅籠柏屋'
     });
-    var marker = new google.maps.Marker(
+     marker4.addListener('click', function()
+    {
+        infoWindow5.open(map, marker4);
+    });
+    var marker5 = new google.maps.Marker(
     {
         position:
         {
@@ -110,7 +174,11 @@ function initMap()
         map: map,
         title: '蓮華寺池公園'
     });
-    var marker = new google.maps.Marker(
+     marker5.addListener('click', function()
+    {
+        infoWindow6.open(map, marker5);
+    });
+    var marker6 = new google.maps.Marker(
     {
         position:
         {
@@ -120,7 +188,11 @@ function initMap()
         map: map,
         title: '島田市駅前'
     });
-    var marker = new google.maps.Marker(
+     marker6.addListener('click', function()
+    {
+        infoWindow7.open(map, marker6);
+    });
+    var marker7 = new google.maps.Marker(
     {
         position:
         {
@@ -130,7 +202,11 @@ function initMap()
         map: map,
         title: '島田市駅前緑地'
     });
-    var marker = new google.maps.Marker(
+     marker7.addListener('click', function()
+    {
+        infoWindow8.open(map, marker7);
+    });
+    var marker8 = new google.maps.Marker(
     {
         position:
         {
@@ -140,7 +216,11 @@ function initMap()
         map: map,
         title: 'おび通り'
     });
-    var marker = new google.maps.Marker(
+     marker8.addListener('click', function()
+    {
+        infoWindow9.open(map, marker8);
+    });
+    var marker9 = new google.maps.Marker(
     {
         position:
         {
@@ -149,8 +229,11 @@ function initMap()
         },
         map: map,
         title: '金谷駅前'
+    }); marker9.addListener('click', function()
+    {
+        infoWindow10.open(map, marker9);
     });
-    var marker = new google.maps.Marker(
+    var marker10 = new google.maps.Marker(
     {
         position:
         {
@@ -159,8 +242,11 @@ function initMap()
         },
         map: map,
         title: '六合駅前'
+    }); marker10.addListener('click', function()
+    {
+        infoWindow11.open(map, marker10);
     });
-    var marker = new google.maps.Marker(
+    var marker11 = new google.maps.Marker(
     {
         position:
         {
@@ -169,8 +255,11 @@ function initMap()
         },
         map: map,
         title: '青葉シンボルロード'
+    }); marker11.addListener('click', function()
+    {
+        infoWindow12.open(map, marker11);
     });
-    var marker = new google.maps.Marker(
+    var marker12 = new google.maps.Marker(
     {
         position:
         {
@@ -179,8 +268,11 @@ function initMap()
         },
         map: map,
         title: '清水港線跡遊歩道'
+    }); marker12.addListener('click', function()
+    {
+        infoWindow13.open(map, marker12);
     });
-    var marker = new google.maps.Marker(
+    var marker13 = new google.maps.Marker(
     {
         position:
         {
@@ -189,6 +281,8 @@ function initMap()
         },
         map: map,
         title: 'ＪＲ焼津駅南口広場'
+    }); marker13.addListener('click', function()
+    {
+        infoWindow14.open(map, marker13);
     });
-    
 }

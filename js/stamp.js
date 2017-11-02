@@ -6,8 +6,8 @@ if (navigator.geolocation)
     {
         var lat = position.coords.latitude;
         var lng = position.coords.longitude;
-        var location = document.getElementById("location");
-        location.innerHTML = "緯度：" + lat + "<br/>経度：" + lng;
+        // var location = document.getElementById("location");
+        // location.innerHTML = "緯度：" + lat + "<br/>経度：" + lng;
         checkLocation(lat, lng);
     }, function errorFunc(error)
     {
@@ -79,8 +79,8 @@ function checkLocation(a, b)
                 }
             }
             check = check.join(",");
-            document.getElementById("csvText")
-                .innerHTML = check;
+            // document.getElementById("csvText")
+            //     .innerHTML = check;
             setLocalStrage(check);
         }
     });
