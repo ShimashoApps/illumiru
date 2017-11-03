@@ -182,8 +182,8 @@ function initMap()
     {
         position:
         {
-            lat: 34.8307965,
-            lng: 138.1739739
+            lat: 34.830447,
+            lng: 138.174006
         },
         map: map,
         title: '島田市駅前'
@@ -210,8 +210,8 @@ function initMap()
     {
         position:
         {
-            lat: 34.8327585,
-            lng: 138.1762455
+            lat: 34.831429,
+            lng: 138.176369
         },
         map: map,
         title: 'おび通り'
