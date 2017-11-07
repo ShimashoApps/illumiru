@@ -60,6 +60,7 @@ function checkLocation(a, b)
                         .append(insert);
                     check[i] = "1";
                     check[0] = Number(check[0]) + 1;
+                    var msg=window.confirm(csvList[i][1]+'　取得');
                 }
                 else
                 {
