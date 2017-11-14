@@ -16,7 +16,7 @@ function initMap()
     });
     var infoWindow = new google.maps.InfoWindow(
     {
-        map: map
+        map:map
     });
     // Try HTML5 geolocation.
     if (navigator.geolocation)
@@ -41,10 +41,11 @@ function initMap()
         handleLocationError(false, infoWindow, map.getCenter());
     }
 
-    function handleLocationError(browserHasGeolocation, infoWindow, pos)
+    function handleLocationError(browserHasGeolocation, infoWindow, pos)//Error: The Geolocation service failed.
     {
         infoWindow.setPosition(pos);
-        infoWindow.setContent(browserHasGeolocation ? 'Error: The Geolocation service failed.' : 'Error: Your browser doesn\'t support geolocation.');
+        infoWindow.setContent(browserHasGeolocation ? '！エラー！<br/>位置情報を取得することが出来ませんでした。<br/>位置情報がオフになっていませんか？'
+        : '！エラー！<br/>あなたの端末はこのサービス<br/>に対応していません。\'t support geolocation.');
 }
    
     var infoWindow2 = new google.maps.InfoWindow(

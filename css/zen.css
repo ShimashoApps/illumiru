@@ -1,51 +1,51 @@
  #map {
-        height: 67%;
-        width: 100%;
-      }
-      /* Optional: Makes the sample page fill the window. */
-      html, body {
-        width: 100%;
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      
-.bttn{
-    display: inline-block;
-    text-decoration: none;
-    background: #668ad8;
-    color: #FFF;
-    width: 30%;
-   /* height: 100%;*/
-    line-height: 800%;
-    border-radius: 50%;
-    text-align: center;
-    vertical-align: middle;
-    overflow: hidden;
-    box-shadow: 0px 0px 0px 5px #668ad8;
-    border: dashed 1px #FFF;
-    transition: .4s;
-}
-
-.bttn:hover{
-    background: #668ad8;
+     height: 57%;
+     width: 100%;
+ }
+ /* Optional: Makes the sample page fill the window. */
+ 
+ html,
+ body {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .bttn {
+     margin:5% 2% 0% 0%;
+     display: inline-block;
+     text-decoration: none;
+     background: #668ad8;
+     color: #FFF;
+     width: 30%;
+     height: calc(100vw/3.3);
+     line-height: 800%;
+     border-radius: 50%;
+     text-align: center;
+     vertical-align: middle;
+     overflow: hidden;
      box-shadow: 0px 0px 0px 5px #668ad8;
-}
-   
-.modoru_btn{
-    display: inline-block;
-    padding: 0.5em 1em;
-    text-decoration: none;
-    background: #668ad8;
-    color: #FFF;
-    border-radius: 40px;
-    box-shadow: 0px 0px 0px 5px #668ad8;
-    border: dashed 1px #FFF;
-}
-
-.modoru_btn:hover{
-    border: dotted 1px #FFF;
-}　
-
-
-
+     border: dashed 1px #FFF;
+     transition: .4s;
+ }
+ 
+ .bttn:hover {
+     background: #668ad8;
+     box-shadow: 0px 0px 0px 5px #668ad8;
+ }
+ 
+ .modoru_btn {
+     display: inline-block;
+     padding: 0.5em 1em;
+     text-decoration: none;
+     background: #668ad8;
+     color: #FFF;
+     border-radius: 40px;
+     box-shadow: 0px 0px 0px 5px #668ad8;
+     border: dashed 1px #FFF;
+ }
+ 
+ .modoru_btn:hover {
+     border: dotted 1px #FFF;
+ }
