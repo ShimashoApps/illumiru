@@ -18,6 +18,7 @@ color: white;
 } */
 
 .itiran {
+    width:100%;
     display: inline-block;
     padding: 5% 5%;
     text-decoration: none;
@@ -73,4 +74,36 @@ color: white;
     bottom: 0px;
     width: 100%;
     text-align: center;
+}
+
+.areaAG{
+  display: flex;
+  align-items:flex-start;
+  flex-wrap: wrap;
+
+}
+.areaG{
+  display: flex;
+  flex-wrap:wrap;
+  align-items:flex-start;
+  width: calc(50% - 10px);
+  margin: 5px;
+  margin-left: 5px;
+}
+
+#print{
+  display: flex;
+  width:100%;
+}
+#print2{
+  display: flex;
+  width:100%;
+}
+#print3{
+  display: flex;
+  width:100%;
+}
+#print4{
+  display: flex;
+  width:100%;
 }

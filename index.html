@@ -26,9 +26,9 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
     <script type="text/javascript" src="js/site.min.js"></script>
 </head>
 
-<body background="img/haikei.jpg">
+<body background="img/etc/haikei.jpg">
     <div id="container">
-        <div id="main"> <img src="img/head.jpeg" class="img-rounded img-responsive">
+        <div id="main"> <img src="img/etc/head.jpeg" class="img-rounded img-responsive">
             <p/>
             <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
@@ -39,17 +39,20 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
                     <li data-target="#carousel-example-generic" data-slide-to="4"></li>
                 </ol>
                 <div class="carousel-inner">
-                    <div class="item active"><img src="img/yaizusi2.JPG"></div>
-                    <div class="item"><img src="img/Kashibaya.JPG"></div>
-                    <div class="item"><img src="img/kanaya2016.JPG"></div>
-                    <div class="item"><img src="img/rengeji.JPG"></div>
-                    <div class="item"><img src="img/rokugou2016.JPG"></div>
+                    <!-- 各エリアの写真1枚を選び「src」にいれる -->
+                    <div class="item active"><img src="img/photo/shizuoka/aoba1.jpg" ></div>
+                    <div class="item"><img src="img/photo/yaizu/yaizu2.jpg" ></div>
+                    <div class="item"><img src="img/photo/fujieda/fujiedaeki.jpg" ></div>
+                    <div class="item"><img src="img/photo/shimada/obi1.jpg" ></div>
+                    <!-- <div class="item"><img src="img/fujieda02.jpg" ></div> -->
                 </div>
                 <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
                 <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
             </div>
             <!-- divタグで囲って中のサイズを1/3にして画像もそのサイズを適用すると必ず横幅に収まります。CSSでも変数が使えます-->
-            <center> <a href="./map.html" class="bttn">マップ</a>  <a href="./itiran.html" class="bttn">エリア</a>  <a href="./stamp.html" class="bttn">スタンプ</a></center>
+            <center> <a href="./map.html" class="bttn">マップ</a> 　　　 <a href="./itiran.html" class="bttn">エリア</a>  
+            <!-- <a href="./stamp.html" class="bttn">スタンプ</a> -->
+            </center>
             <p/><b>
         </div><br/>
         <!-- フッター-->
@@ -59,25 +62,5 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
             </div>
         </div>
     </div>
-
-    <script type="text/javascript">
-      if ((navigator.userAgent.toLowerCase().indexOf("iphone") > -1) || (navigator.userAgent.toLowerCase().indexOf("ipod") > -1) || (navigator.userAgent.toLowerCase().indexOf("ipad") > -1)) {
-        window.location.href = 'https://itunes.apple.com/tw/app/id1300743231';
-      } else if ((navigator.userAgent.toLowerCase().indexOf("android") > -1)) {
-        window.location.href = 'https://play.google.com/store/apps/details?id=jp.shimasho.illumiru';
-      } else {
-        window.location.href = './index.html';
-      }
-    </script>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-110084167-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-110084167-1');
-</script>
-
 </body>
 </html>

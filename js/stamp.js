@@ -50,6 +50,7 @@ function checkLocation(a, b)
             // csvを配列に格納
             csvList = $.csv()(data);
             //現在地と全ての場所をチェック
+            var cnt=0;
             for (var i = 1; i < csvList.length; i++)
             {
                 var distance = Math.sqrt(Math.pow(a - csvList[i][2], 2) + Math.pow(b - csvList[i][3], 2));
@@ -60,7 +61,8 @@ function checkLocation(a, b)
                         .append(insert);
                     check[i] = "1";
                     check[0] = Number(check[0]) + 1;
-                    var msg=window.confirm(csvList[i][1]+'　取得');
+                    var msg=window.alert(csvList[i][1]+'　取得');
+                    cnt+=1;
                 }
                 else
                 {
@@ -72,13 +74,16 @@ function checkLocation(a, b)
                 }
                 if (check[i] == 1)
                 {
-                    insert = '<img src="' + csvList[i][4] + '" id="img">';
+                    insert = '<a href="http://maps.google.com/maps?daddr='+csvList[i][2]+','+csvList[i][3]+'&saddr="現在地""><img src="' + csvList[i][4] + '" id="img"></a>';
                 }
                 else
                 {
-                    insert = '<img src="' + csvList[i][5] + '" id="img">';
+                    insert = '<a href="http://maps.google.com/maps?daddr='+csvList[i][2]+','+csvList[i][3]+'&saddr="現在地""><img src="' + csvList[i][5] + '" id="img"></a>';
                 }
             }
+            if(cnt==0){
+                    var msg=window.alert('\n取得できませんでした。\n\nGPSの利用状況を確認し「スタンプを取得」ボタンを押してください。\nまたは、取得したいスタンプを押して場所を確認してください。');
+                }
             check = check.join(",");
             // document.getElementById("csvText")
             //     .innerHTML = check;

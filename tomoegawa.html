@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>清水港線跡遊歩道</title>
+    <title>巴川</title>
     <!-- Sets initial viewport load and disables zooming  -->
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
     <!-- SmartAddon.com Verification -->
@@ -27,8 +27,8 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
   
   
   <body class="home">
-   <a href="./index.html" >
-  <img src="img/etc/head.jpeg"  class="img-rounded img-responsive"></a><p/>
+  <a href="./index.html" >
+  <img src="img/head.jpeg"  class="img-rounded img-responsive"></a><p/>
   
     
  <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -39,30 +39,35 @@ And, for the designers, we offer a free PSD Download. It provides a faster, easi
             
         </ol>
         <div class="carousel-inner">
-            <div class="item active"><img src="img/photo/shizuoka/shimizu1.jpg"></div>
-            <div class="item"><img src="img/photo/shizuoka/shimizu2.jpg"></div>
-            <div class="item"><img src="img/photo/shizuoka/shimizu3.jpg"></div>
+            <div class="item active"><img src="img/tomoe1.jpg"></div>
+            <div class="item"><img src="img/tomoe2.jpg"></div>
+            <div class="item"><img src="img/tomoe3.jpg"></div>
 
             </div>
         <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev"> <span class="glyphicon glyphicon-chevron-left"></span> </a>
         <a class="right carousel-control" href="#carousel-example-generic" data-slide="next"> <span class="glyphicon glyphicon-chevron-right"></span> </a>
               </div>
               <div class="jumbotron-contents">
-                <h4>場所</h4>
-                清水港線跡遊歩道</br>
-                JR清水駅東口広場　等</br>
-                <h4>点灯期間</h4>
-                ～令和２年3月1日（日）</br>
-                <h4>点灯時間</h3>
-                17：00～22：00</br>
-                <!-- <h4>点灯イベント</h4>
-                平成30年11月17日(土)　18時（予定）～</br>
-                <h4>見どころ</h4>
-                乗船可能な船のモニュメントを設置します。</br> -->
-                <h4>アクセス</h4>
-                JR清水駅、静岡鉄道新清水駅より徒歩5分～10分</br>
-                
+                <h4>場所</h4>静岡市清水区巴川沿いシンボルロード、巴町公園、浜田親水公園
+                <h4>点灯期間</h4>平成30年11月17日(土)～平成31年3月1日(金)
+                <h4>点灯時間</h4>17時から22時まで
+                <h4>HP</h4><a href="https://www.tomoegawa.net
+" onClick="burau()"> https://www.tomoegawa.net</a>
+                <h4>点灯イベント</h4>平成30年11月17日(土)　17時～
+                <h4>期間中のイベント</h4>
+                11月17日（土）オープニングイベント・点灯式<br>
+                11月30日（金）プレミアムフライデーイベント（親子で夜の公園で遊ぼう）<br>
+                12月15日（土）クリスマスイベント<br>
+                1月12日（土）フードイベント<br>
+                1月25日（金）プレミアムフライデーイベント<br>
+                2月2日（土）バレンタインイベント<br>
+                3月2日（土）クロージングイベント<br>
+                <h4>見どころ</h4>地域の方々と作成したヒンメリ、竹灯りによるライトアップを行います。
+                <h4>アクセス</h4>静岡鉄道新清水駅より徒歩5分<br>JR清水駅より徒歩10分～15分
+                    
+                    
                 <h4>ルート検索</h4>
+                少し時間がかかります。
                 <p id="ten">少々お待ちください</p>  
                <script language="JavaScript">
 var u="";
@@ -71,7 +76,7 @@ if( navigator.geolocation ){
     function onSuccess( position ){
         var lat=position.coords.latitude;
         var lng=position.coords.longitude;
-        document.getElementById("ten").innerHTML="<a href='http://maps.google.com/maps?saddr="+lat+","+lng+"&daddr= 35.018455,138.489833&dirflg=w'><h5>ルートを見る</h5></a>";}, 
+        document.getElementById("ten").innerHTML="<a href='https://maps.google.com/maps?saddr="+lat+","+lng+"&daddr=34.9734533,138.3820972&dirflg=w'><h5>ルートを見る</h5></a>";}, 
     function onError(error){
         var errorMessage = {
             0: "原因不明のエラーが発生しました…。" ,
@@ -80,12 +85,14 @@ if( navigator.geolocation ){
             3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。" ,};
         alert(errorMessage[error.code]);});}
 else{}
-</script>    
+</script>
                 </div>
             </div>
-            <center><a href="./index.html" class="modoru_btn">ホーム</a>&nbsp;&nbsp;&nbsp;
+            
+           <center><a href="./index.html" class="modoru_btn">ホーム</a>&nbsp;&nbsp;&nbsp;
                &nbsp;&nbsp;&nbsp;<a href="javascript:history.back(-1)" class="modoru_btn">もどる</a><br/><br/>
            </center>
+           
    
   </body>
 </html>
